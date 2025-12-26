@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-    @vite(['resources/css/app.css','resources/css/common.css','resources/jp/app.js'])
+    @vite(['resources/css/app.css','resources/css/style.css','resources/jp/app.js'])
 </head>
 <body>
     <main class="main">

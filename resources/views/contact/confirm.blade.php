@@ -1,3 +1,38 @@
-<div>
-    <!-- Smile, breathe, and go slowly. - Thich Nhat Hanh -->
-</div>
+@extends('layouts.user_base')
+@section('title','内容確認')
+@section('content')
+
+ <section class="confirm">
+    <div class="contactMainBox">
+        <div class="dataContentItem">
+            <p class="dataContentItemP">会社名：○○株式会社</p>
+        </div>
+        <div class="dataContentItem">
+            <p class="dataContentItemP">氏名：山田太郎</p>
+        </div>
+        <div class="dataContentItem">
+            <p class="dataContentItemP">電話番号：000-0000-0000</p>
+        </div>
+        <div class="dataContentItem">
+            <p class="dataContentItemP">メールアドレス：test@test</p>
+        </div>
+        <div class="dataContentItem">
+            <p class="dataContentItemP">生年月日：2025-12-08</p>
+        </div>
+        <div class="dataContentItem">
+            <p class="dataContentItemP">性別:女</p>
+        </div>
+        <div class="dataContentItem">
+            <p class="dataContentItemP">職業:会社員（正社員）</p>
+        </div>
+        <div class="dataContentItem">
+            <p class="dataContentItemP">お問い合わせ内容：<br/>test</p>
+        </div>
+        <form action="{{route('contact.send')}}" method="POST">
+            @csrf
+            <button type="submit" class="submitButton">送信する</button>
+        </form>
+        <button type="button" class="submitButton" onclick="history.back()">戻る</button>
+    </div>
+ </section>
+@endsection

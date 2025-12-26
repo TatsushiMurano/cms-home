@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.main{
+    color:#333;
+}
+.contentsArea{
+    width:100%;
+    padding:80px 20px 50px;
+}
+
+.contactMainBox{
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+.contactItem .required{
+    background: #88c8ac;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+.contactItem{
+    border-top: 1px #eaedf2 solid;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.textItem{
+    padding: 20px 10px;
+    width: 40%;
+}
+.inputItem{
+    padding: 20px 10px;
+    width: 60%;
+}
+.textInput{
+    background: #eaedf2;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+.textItem label{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.errorMessage{
+    color: red;
+    display: block;
+}
+.submitButton{
+    background: #88c8ac;
+    color: #fff;
+    padding: 20px 5px;
+    width: 40%;
+    border-radius: 8px;
+    border: 2px #333 solid;
+    margin: 5px auto 20px auto;
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.dateInput{
+    border: 1px #333 solid;
+}
+.select{
+    border: 1px #333 solid;
+}
+.contactText{
+    background:  #eaedf2;
+    padding: 5px;
+    width: 100%;
+    height: 200px;
+}
+.dataContentItem{
+    border-top: 1px #eaedf2 solid;
+    padding: 40px;
+}
+.dataContentItemP{
+    font-weight: bold;
+}
+.sendMessageBox{
+    display: block;
+    width: auto;
+    background: #d2f7cd;
+    color: green;
+    font-size: 1.5rem;
+    padding: 8px;
+    font-weight: bold;
+}
