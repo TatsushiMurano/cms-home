@@ -13,7 +13,7 @@
                 <div class="inputItem">
                     <input type="text" id="company" name="company" value="{{old('company')}}" class="textInput" placeholder="例）株式会社○○">
                     @error('company')
-                        <span class="errorMessage">{{$message}}</span>
+                        <span class="errorMessage">会社名は必須です。</span>
                     @enderror
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 <div class="inputItem">
                     <input type="text" id="name" name="name" value="{{old('company')}}" class="textInput" placeholder="例）山田太郎">
                     @error('name')
-                        <span class="errorMessage">{{$message}}</span>
+                        <span class="errorMessage">氏名は必須です。</span>
                     @enderror
                 </div>
             </div>
@@ -36,7 +36,9 @@
                 </div>
                 <div class="inputItem">
                     <input type="tell" id="phone" name="phone" value="{{old('company')}}" class="textInput" placeholder="例）000-0000-0000">
-                    <span class="errorMessage">電話番号は必須です。</span>
+                    @error('phone')
+                        <span class="errorMessage">電話番号は必須です。</span>
+                    @enderror
                 </div>
             </div>
             <div class="contactItem">
@@ -46,7 +48,9 @@
                 </div>
                 <div class="inputItem">
                     <input type="email" id="mail" name="mail" value="{{old('company')}}" class="textInput" placeholder="例）example@gmail.com">
-                    <span class="errorMessage">メールアドレスは必須です。</span>
+                    @error('mail')
+                        <span class="errorMessage">メールアドレスは必須です。</span>
+                    @enderror
                 </div>
             </div>
             <div class="contactItem">
@@ -56,7 +60,9 @@
                 </div>
                 <div class="inputItem">
                     <input type="date" id="birthday" name="birthday" value="{{old('company')}}" class="dateInput" placeholder="年/月/日">
-                    <span class="errorMessage">生年月日は必須です。</span>
+                    @error('birthday')
+                        <span class="errorMessage">生年月日は必須です。</span>
+                    @enderror
                 </div>
             </div>
             <div class="contactItem">
@@ -67,7 +73,9 @@
                 <div class="inputItem">
                     <input id="male" type="radio" name="sex" value="男"><label for="male">男</label>
                     <input id="female" type="radio" name="sex" value="女"><label for="female">女</label>
-                    <span class="errorMessage">性別は必須です。</span>
+                    @error('sex')
+                        <span class="errorMessage">性別は必須です。</span>
+                    @enderror
                 </div>
             </div>
             <div class="contactItem">
@@ -81,7 +89,9 @@
                         <option value="会社員（正社員）">会社員（正社員）</option>
                         <option value="パート・アルバイト">パート・アルバイト</option>
                     </select>
-                    <span class="errorMessage">職業は必須です。</span>
+                    @error('job')
+                        <span class="errorMessage">職業は必須です。</span>
+                    @enderror
                 </div>
             </div>
             <div class="contactItem">
@@ -91,7 +101,9 @@
                 </div>
                 <div class="inputItem">
                     <textarea name="contact" id="contact" class="contactText"></textarea>
-                    <span class="errorMessage">お問い合わせ内容は必須です。</span>
+                    @error('contact')
+                        <span class="errorMessage">お問い合わせ内容は必須です。</span>
+                    @enderror
                 </div>
             </div>
             <button type="submit" class="submitButton">確認する</button>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -25,8 +26,19 @@ class ContactController extends Controller
         ]);
         return view('contact.confirm',compact('validated'));
     }
-    public function send()
+    public function send(Request $request)
     {
-        return view('contact.send');
+        $contact = new Contact();
+        $contact->company = $request->company;
+        $contact->name = $request->name;
+        $contact->phone = $request->phone;
+        $contact->mail = $request->mail;
+        $contact->birthday = $request->birthday;
+        $contact->sex = $request->sex;
+        $contact->job = $request->job;
+        $contact->contact = $request->contact;
+        $contact->save();
+
+        return view('contact.send',['contact' => $contact]);
     }
 }

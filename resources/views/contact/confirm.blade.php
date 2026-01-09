@@ -30,6 +30,9 @@
         </div>
         <form action="{{route('contact.send')}}" method="POST">
             @csrf
+                @foreach ($validated as $key => $value)
+                    <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+                @endforeach
             <button type="submit" class="submitButton">送信する</button>
         </form>
         <button type="button" class="submitButton" onclick="history.back()">戻る</button>
